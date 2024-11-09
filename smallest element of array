@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+    int n,i,s;
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the size of the array");
+    n=sc.nextInt();
+    int [] a=new int[n];
+    System.out.println("Enter the elements in the array");
+    for(i=0;i<n;i++){
+       a[i]=sc.nextInt();
+    }
+    s=a[0];
+    for(i=0;i<n;i++){
+        if(a[i]<s){
+            s=a[i];
+        }
+}
+    System.out.println("smalest elements is"+s);
+    
+}
+}
