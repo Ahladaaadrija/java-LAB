@@ -1,0 +1,16 @@
+import java.util.*;
+import java.io.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter the string");
+	    String s=sc.nextLine();
+	    System.out.println("Enter the character to be searched");
+	    char c=sc.next().charAt(0);
+	   System.out.println("Enter the chatactr o be replaced with");
+	   char r=sc.next().charAt(0);
+	   String m=s.replace(c,r);
+	   System.out.println("the new replaced string is :"+m);
+	    }
+	}
