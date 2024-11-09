@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+public static void main(String args[]){
+    int n,flag=0;
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Ente rthe number");
+    n=sc.nextInt();
+    if(n%2==0){
+        flag=1;
+    }
+    else{
+        flag=0;
+    }
+    if(flag==0){
+        System.out.println("the number is odd");
+    }
+    else{
+        System.out.println("the number is even");
+    }
+}
+}
