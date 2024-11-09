@@ -1,1 +1,45 @@
 
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+    int i,j,r1,c1,r2,c2,k;
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the coloumn of the a matrix");
+    c1=sc.nextInt();
+    System.out.println("Enter the row of the a matrix");
+    r1=sc.nextInt();
+    System.out.println("Enter the coloumn of the b matrix");
+    c2=sc.nextInt();
+    System.out.println("Enter the row of the b matrix");
+    r2=sc.nextInt();
+    int [][] a=new int[r1][c1];
+    int [][] b=new int[r2][c2];
+     int [][] d=new int[r1][c2];
+    System.out.println("Enter the elements in the first matrix");
+    for(i=0;i<r1;i++){
+        for(j=0;j<c1;j++){
+       a[i][j]=sc.nextInt();
+    }}
+    System.out.println("Enter the elements in the second matrix");
+    for(i=0;i<r2;i++){
+        for(j=0;j<c2;j++){
+       b[i][j]=sc.nextInt();
+    }}
+if(c1!=r2){
+        System.out.println("Can't take the product");
+    }
+   
+else{
+    System.out.println("product of two matrix");
+    for(i=0;i<r1;i++){
+        for(j=0;j<c2;j++){
+            for(k=0,d[i][j]=0;k<r1;k++){
+       d[i][j]=d[i][j]+(a[i][k]*b[k][j]);
+    }}}
+
+    for(i=0;i<r1;i++){
+        for(j=0;j<c2;j++){
+       System.out.println(d[i][j]);
+    }}
+    }}}
+ 
