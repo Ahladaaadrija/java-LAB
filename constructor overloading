@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+public class Main{
+
+    Main(int l,int b){
+        int peri=2*(l+b);
+        System.out.println("The perimeter of the rectangle :"+peri);
+
+    }
+    Main(float r){
+        float per= 2*3.14f*r;
+        System.out.println("The perimeter of the circle :"+per);
+    }
+    public static void main(String args[])
+    {
+        int l,b;
+        float r;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the length and breadth ");
+        l=sc.nextInt();
+        b=sc.nextInt();
+        System.out.println("Enter the radius");
+        r=sc.nextFloat();
+       Main obj1=new Main(l,b);
+       Main obj2=new Main(r);
+    }
+}
