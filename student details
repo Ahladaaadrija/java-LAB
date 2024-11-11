@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+
+public class Main{
+    Scanner sc=new Scanner(System.in);
+        String name;
+        int i;
+        int rollNo;
+        int [] mark=new int[5];
+        void read(){
+            System.out.println("Enter the name");
+            name=sc.next();
+            System.out.println("Enter the roll number");
+            rollNo=sc.nextInt();
+            System.out.println("Enter the mark of five subjects");
+            for(i=0;i<5;i++){
+                mark[i]=sc.nextInt();
+            }
+        }
+        void display(){
+            System.out.println("name :"+name);
+            System.out.println("roll no. :"+rollNo);
+            System.out.println("marks of 5 subject");
+            for(i=0;i<5;i++){
+                System.out.println(mark[i]);
+            }
+        }
+    
+
+    public static void main(String[] args) {
+        Main s=new Main();
+        s.read();
+        s.display();
+
+    }
+}
