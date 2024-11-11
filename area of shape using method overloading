@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+class calc{
+    int rectangle;
+    float circle,triangle;
+    public void area(int x,int y) {
+        rectangle=x*y;
+        System.out.println("area of rectangle with length "+x+" and breadth "+y+" is :"+rectangle);
+    }
+    public void area(float r) {
+            circle=(float) (3.14*r*r);
+            System.out.println("area of circle with radius "+r+" is :"+circle);
+    }
+    public void area(float b,float h) {
+        triangle=(float) (0.5*b*h);
+        System.out.println("area of triangle with length "+b+" and breadth "+h+" is :"+triangle);
+    }
+}
+
+public class Main{
+
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        calc c=new calc();
+        System.out.println("Enter the length and breadth of rectangle");
+        int l=sc.nextInt();
+        int b=sc.nextInt();
+        c.area(l,b);
+        System.out.println("Enter the radius of circle");
+        float r=sc.nextFloat();
+        c.area(r);
+        System.out.println("Enter the base and height of rectangle");
+        float h1=sc.nextFloat();
+        float h=sc.nextFloat();
+        c.area(h1,h);
+
+    }
+
+}
