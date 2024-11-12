@@ -1,0 +1,56 @@
+
+class odd extends Thread{
+    public void run(){
+        System.out.println("ODD NUMBERS");
+        try {
+            for(int i=1;i<=100;i+=2){
+                System.out.print(i+"  ");
+            }
+            System.out.println();
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+class even extends Thread{
+    public void run(){
+        try {
+            System.out.println("EVEN NUMBERS");
+            for(int i=2;i<=100;i+=2){
+                System.out.print(i+"  ");
+            }
+            
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }
+}
+
+class oddeven{
+    /**
+     * @param args
+     */
+    public static void main(String args[]){
+        odd o=new odd();
+        even j=new even();
+        o.start();
+        try {
+            o.join();
+        } 
+            
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        j.start();
+        try {
+            j.join();
+        } 
+            
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
