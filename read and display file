@@ -1,0 +1,26 @@
+import java.io.*;
+
+class File{
+    public static void main(String args[]){
+        try{
+            FileInputStream f=new FileInputStream("text.txt");
+
+            int ch=0;
+            int i=1;
+            System.out.print(i+".");
+            while((ch=f.read())!=-1){
+                char c=(char)ch;
+                System.out.print(c);
+                if(c=='\n'){
+                    System.out.print((++i)+".");
+                }
+            }
+
+
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+
+    }
+}
