@@ -18,6 +18,12 @@ public class Main{
                 a[c+1]=t;
             }
         }}
-    System.out.println("the second largest element is "+a[1]);
+    for(i=0;i<n;i++){
+       if(a[i]>a[i+1]){
+           System.out.println("the second largest element is "+a[i+1]);
+           break;
+       }
+    }
+    
 }
 }
