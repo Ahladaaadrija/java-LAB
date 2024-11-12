@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+class Filesum
+{
+        public static void main(String[] args) 
+        {
+            int sum = 0;
+                try
+                {
+                    FileReader f=new FileReader("text2.txt");
+                    BufferedReader  b=new BufferedReader(f);
+                    String line=b.readLine();
+                    if(line!=null){
+                        StringTokenizer  to=new StringTokenizer(line);
+                        while(to.hasMoreTokens()){
+                            String token=to.nextToken();
+                            int num=Integer.parseInt(token);
+                            System.out.println(num);
+                            sum +=num;
+
+                        }
+                    
+                        System.out.println("sum of integers :"+sum);
+                    }
+                    else{
+                        System.out.println("empty");
+                    }
+                    
+
+                    }
+        
+            catch(Exception e)
+             {
+                        System.out.println(e);
+                }
+              
+        }}
