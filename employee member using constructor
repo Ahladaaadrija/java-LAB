@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+
+class member{
+    String name;
+    int age;
+    String ph;
+    String add;
+    int sal;
+    member( String name,int age,String ph,String add,int sal){
+        this.name=name;
+        this.age=age;
+        this.ph=ph;
+        this.add=add;
+        this.sal=sal;
+    }
+    public void printsal(){
+        System.out.println("salary :"+sal);
+    }
+         void display(){
+        System.out.println("Name :"+name);
+        System.out.println("age : "+age);
+        System.out.println("phone :"+ph);
+        System.out.println("address :"+add);
+    }
+    }
+class employee extends member{
+    String spec;
+    employee( String name,int age,String ph,String add,int sal,String spec){
+        super(name,age,ph,add,sal);
+        this.spec=spec;
+    }
+     void display(){
+        System.out.println("spec :"+spec);
+        super.display();
+    }
+}
+public class Main{
+    public static void main(String args[]){ String name;
+    int age;
+    String ph;
+    String add;
+    int sal;
+    String spec;
+    Scanner sc=new Scanner(System.in);
+    employee e=new employee("ahlada",12,"96754","sreemakom",4000,"cs");
+        e.display();
+    }
+}
