@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+
+class shape{
+     void p(){
+        System.out.println("This is shape");
+    }
+}
+class rectangle extends shape{
+     void p1(){
+        System.out.println("This is rectangle");
+        
+    }
+    void call(){
+            super.p();
+            p1();
+        }
+}
+class circle extends shape{
+     void p2(){
+        System.out.println("This is circle");
+    }
+}
+class square extends rectangle{
+      void p3(){
+        System.out.println("Square  is a rectangle");
+    }
+    void call1(){
+         p3();
+         super.call();
+     }
+}
+
+public class Main{
+    public static void main(String args[]){
+        square s=new square();
+        s.call1();
+    }
+}
