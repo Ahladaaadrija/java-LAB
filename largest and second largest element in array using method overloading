@@ -1,0 +1,54 @@
+import java.util.*;
+import java.io.*;
+class a{
+    void large(int a[]){
+        System.out.println("the largest element is"+a[0]);
+        
+    }
+void large(int a[],int n){
+    for(int i=0;i<n-1;i++){
+        if(a[i]>a[i+1]){
+             System.out.println("the second largest element is"+a[i+1]);
+        }
+    }
+}
+
+}
+
+
+public class Main{
+    public static void main(String args[]){
+        
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int n=sc.nextInt();
+        int [] a=new int[n];
+        System.out.println("Enter the elements");
+        for(int i=0;i<n;i++){
+             a[i]=sc.nextInt();
+        }
+        for(int p=1;p<=n;p++){
+            for(int c=0;c<n-p;c++){
+                if(a[c]<a[c+1]){
+                    int t=a[c];
+                    a[c]=a[c+1];
+                    a[c+1]=t;
+                }
+            }
+        }
+        System.out.println("enter 1 for largest element");
+        System.out.println("enter 2 for second largest element");
+        System.out.println("enter 3 for exit");
+        System.out.println("enter your choices");
+        int f=sc.nextInt();
+        a aa=new a();
+        switch(f){
+            case 1:aa.large(a);
+            break;
+            case 2:aa.large(a,n);
+            break;
+            default: System.out.println("exited");
+                    
+        }
+    }
+}
