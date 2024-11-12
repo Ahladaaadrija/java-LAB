@@ -1,0 +1,140 @@
+import java.util.*;
+import java.io.*;
+
+class employee{
+    String name;
+    int age;
+    String ph;
+    int sal;
+    String add;
+    employee(String name,int age,String ph,int sal,String add){
+        this.name=name;
+        this.age=age;
+        this.ph=ph;
+        this.sal=sal;
+        this.add=add;
+    }
+    void print_salary(){
+        System.out.println("salary :"+sal);
+    }
+    
+    void display(){
+        System.out.println("Name :"+name);
+        System.out.println("age : "+age);
+        System.out.println("phone :"+ph);
+        System.out.println("address :"+add);
+    }
+}
+class officer extends employee{
+    String spec;
+    officer(String name,int age,String ph,int sal,String add,String spec){
+        super(name,age,ph,sal,add);
+        this.spec=spec;
+    }
+    
+    void display(){
+        super.display();
+        System.out.println("specialization :"+spec);
+    }
+}
+class manager extends employee{
+    String dep;
+    manager(String name,int age,String ph,int sal,String add,String dep){
+        super(name,age,ph,sal,add);
+        this.dep=dep;
+    }
+    
+    void display(){
+        super.display();
+        System.out.println("department :"+dep);
+    }
+}
+public class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int i;
+        String name;
+        int age;
+        String ph;
+        int sal;
+        String add;
+        String spec;
+        String dep;
+        System.out.println("Enter the number of employees");
+        int n1=sc.nextInt();
+        employee e[]=new employee[n1];
+        System.out.println("Enter the number of officers");
+        int n2=sc.nextInt();
+        officer o[]=new officer[n2];
+        System.out.println("Enter the number of managers");
+        int n3=sc.nextInt();
+        manager m[]=new manager[n3];
+        
+        if(n1>0){
+            System.out.println("Enter the details of employee");
+            System.out.println("-------------------------------");
+            for( i=0;i<n1;i++){
+                System.out.println("Enter the name :");
+                name=sc.next();
+                System.out.println("Enter the age :");
+                age=sc.nextInt();
+                System.out.println("Enter the phone no. :");
+                ph=sc.next();
+                System.out.println("Enter the salary :");
+                sal=sc.nextInt();
+                System.out.println("Enter the address :");
+                add=sc.next();
+                e[i]=new employee(name,age,ph,sal,add);
+            }}
+        if(n2>0){
+            System.out.println("Enter the details of officer");
+            System.out.println("-------------------------------");
+            for(i=0;i<n2;i++){
+                System.out.println("Enter the name :");
+                name=sc.next();
+                System.out.println("Enter the age :");
+                age=sc.nextInt();
+                System.out.println("Enter the phone no. :");
+                ph=sc.next();
+                System.out.println("Enter the salary :");
+                sal=sc.nextInt();
+                System.out.println("Enter the address :");
+                add=sc.next();
+                System.out.println("Enter the spec :");
+                spec=sc.next();
+                o[i]=new officer(name,age,ph,sal,add,spec);
+            }}
+            
+            if(n3>0){
+            System.out.println("Enter the details of manager");
+            System.out.println("-------------------------------");
+            for(i=0;i<n3;i++){
+                System.out.println("Enter the name :");
+                name=sc.next();
+                System.out.println("Enter the age :");
+                age=sc.nextInt();
+                System.out.println("Enter the phone no. :");
+                ph=sc.next();
+                System.out.println("Enter the salary :");
+                sal=sc.nextInt();
+                System.out.println("Enter the address :");
+                add=sc.next();
+                System.out.println("Enter the dep :");
+                dep=sc.next();
+                m[i]=new manager(name,age,ph,sal,add,dep);
+            }}
+            for(i=0;i<n1;i++){
+                e[i].display();
+            }
+            for(i=0;i<n1;i++){
+                o[i].display();
+            }
+            for(i=0;i<n1;i++){
+                m[i].display();
+            }
+            
+        
+        
+        
+    }
+}
