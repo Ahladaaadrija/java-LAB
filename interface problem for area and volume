@@ -1,0 +1,47 @@
+import java.util.*;
+import java.io.*;
+
+interface area{
+    public void area(int l,int b);
+}
+ interface volume {
+    public void volume(int l,int b,int h);
+}
+class a implements area,volume{
+    int r,h;
+    public void area(int l,int b){
+         r=l*b;
+        System.out.println("Area of the rectangle is :"+r);
+    }
+    public void volume(int l,int b,int r){
+         h=l*b*r;
+        System.out.println("volume of the rectangle is :"+h);
+    }
+}
+public class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the lenghth of rectangle");
+        int k=sc.nextInt();
+        System.out.println("Enter the breadth");
+        int p=sc.nextInt();
+        System.out.println("Enter the height");
+        int o=sc.nextInt();
+        a aa=new a();
+        aa.area(k,p);
+        aa.volume(k,p,o);
+        
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
