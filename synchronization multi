@@ -1,0 +1,47 @@
+import java.util.*;
+import java.io.*;
+
+ class Table{
+
+    synchronized void p(int n){
+        try {
+            System.out.println("Multiplication table of"+n);
+            System.out.println("---------------------------");
+            for(int i=1;i<=10;i++){
+                int r=n*i;
+                System.out.println(i+"*"+n+"="+r);
+            }
+        } 
+        catch (Exception e) {
+        }
+    }
+     }
+class the1 extends Thread{
+    Table t;
+    the1(Table obj){
+                this.t=obj;
+    }
+    public void run(){
+        t.p(5);
+    }
+}
+class the2 extends Thread{
+    Table t;
+    the2(Table t){
+        this.t=t;
+    }
+    public void run(){
+        t.p(100);
+    }
+}
+public class Table1{
+    public static void main(String args[]){
+        Table obj=new Table();
+        the1 obj1=new the1(obj);
+        the2 obj2=new the2(obj);
+        obj1.start();
+        obj2.start();
+
+    } 
+
+}
