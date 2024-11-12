@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+class exception{
+    int h[]={1,2,3,4,5};
+    int r;
+    int a;
+    int b;
+    exception(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    void text1(){
+        try{
+            r=a/b;
+        }
+        catch(Exception e){
+            System.out.println(e);
+    }
+}
+void text2(){
+    try{
+        System.out.println(h[5]);
+    }
+    catch(Exception e){
+            System.out.println(e);
+    }
+}
+}
+class Main{
+    public static void main(String args[]){
+        int a,b; a=1;b=0;
+        exception e=new exception(a,b);
+        e.text1();
+        e.text2();
+    }
+}
