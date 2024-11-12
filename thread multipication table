@@ -1,0 +1,57 @@
+
+class five extends Thread{
+    public void run(){
+        System.out.println("multipication table of 5");
+            System.out.println("-----------------------------");
+        try {
+            for(int i=1;i<=10;i++){
+                int r=5*i;
+                System.out.println(i+"*5 ="+r);
+            }
+            System.out.println();
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+class ten extends Thread{
+    public void run(){
+        try {
+            System.out.println("multipication table of 10");
+            System.out.println("-----------------------------");
+            for(int i=2;i<=10;i++){
+                int r=10*i;
+                System.out.println(i+"*10 ="+i);
+            }
+            
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }
+}
+
+class oddeven{
+    public static void main(String args[]){
+        five o=new five();
+        ten j=new ten();
+        o.start();
+        try {
+            o.join();
+        } 
+            
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        j.start();
+        try {
+            j.join();
+        } 
+            
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
