@@ -1,0 +1,60 @@
+
+ class table{
+
+    synchronized void p(int n){
+        int i = 0;
+        if(n==1){
+            System.out.println("odd numbers");
+        }
+        else{
+            System.out.println("even numbers");
+        }
+        try {
+        for(i=n;i<=100;i+=2){
+            
+            System.out.println(i+"");
+
+           }
+        } 
+        catch (Exception e) {
+        }
+    }
+ }
+
+class odd extends Thread{
+    table t;
+    odd(table t) {
+        this.t = t;
+    }
+
+    public void run(){
+       
+        t.p(1);
+
+    }
+}
+class even extends Thread{
+    table t;
+    even(table t) {
+        this.t = t;
+    }
+
+    public void run(){
+        
+        t.p(2);
+
+    }
+}
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        table tab = new table(); 
+        odd o=new odd(tab);
+        o.start();
+        even e=new even(tab);
+        e.start();
+    }
+}
