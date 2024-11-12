@@ -1,0 +1,47 @@
+import java.util.*;
+import java.io.*;
+
+abstract class shape{
+      abstract void numberofsides();
+}
+
+class rectangle extends shape{
+    void numberofsides(){
+        System.out.println("The number of sides of rectangle is 4");
+    }
+}
+class hexagon extends shape{
+    void numberofsides(){
+    System.out.println("the number of sides of hexagon is 6");
+    }
+}
+class triangle extends shape{
+    void numberofsides(){
+    System.out.println("the number of sides of triangle is 3");
+    }
+}
+
+ class Main {
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        rectangle r=new rectangle();
+        hexagon h=new hexagon();
+        triangle t=new triangle();
+            
+            System.out.println("\nEnter 1 for rectangle");
+            System.out.println("\nEnter 2 for hexagon");
+            System.out.println("\nEnter 3 for triangle");
+            System.out.println("\n enter your choice");
+            int c=sc.nextInt();
+            switch(c){
+                case 1:r.numberofsides();
+                       break;
+                case 2:h.numberofsides();
+                       break;
+                case 3:t.numberofsides();
+                       break;
+                default:System.out.println("Exited");
+                       break;
+    
+            }}}
+
