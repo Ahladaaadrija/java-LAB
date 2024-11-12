@@ -1,0 +1,55 @@
+import java.io.*;
+import java.util.*;
+
+
+class bank{
+    int bal=0;
+     void depo(int s){
+        System.out.println("deposited"+s);
+        bal=bal+s;
+        System.out.println("balance is"+bal);
+    }
+    void with(int w){
+         System.out.println("withdroved"+w);
+         bal=bal-w;
+        System.out.println("balance is"+bal);
+         
+    }
+   
+}
+class sa extends bank{
+     void with(int w1){
+         if(bal-w1<100){
+        System.out.println("withdroving not posible");
+    }
+         else{bal=bal-w1;
+             System.out.println("withdroved"+w1);
+         int b=bal-w1;
+        System.out.println("balance is"+b);
+         
+         }}
+         
+    }
+
+public class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+         System.out.println("enter the amount to be deposited");
+         int s=sc.nextInt();
+         System.out.println("enter the amount to be withdroved");
+         int w=sc.nextInt();
+          System.out.println("enter the amount to be withdroved from saing");
+         int w1=sc.nextInt();
+         bank g=new bank();
+         g.depo(s);
+         g.with(w);
+         sa h=new sa();
+         h.depo(s);
+         h.with(w1);
+         
+         
+         
+         
+    
+    }
+}
