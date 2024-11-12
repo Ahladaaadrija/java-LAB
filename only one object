@@ -1,0 +1,31 @@
+import java.io.*;
+class Employee {
+     void display() {
+        System.out.println("Name of class is Employee");
+    }
+     void calSalary() {
+        System.out.println("Salary of employee is 10000");
+    }
+}
+class Engineer extends Employee {
+    void display() {
+        System.out.println("Name of class is Engineer");
+    }
+     void calSalary() {
+        System.out.println("Salary of employee is 20000");
+    }
+     
+    void call(){
+        super.display();
+        super.calSalary();
+        calSalary();
+        display();
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Engineer eng = new Engineer();
+        eng.call();
+    
+    }
+}
